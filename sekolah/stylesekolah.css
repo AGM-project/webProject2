@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
+*{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.sidebar {
+  position: fixed;
+  left: 0px;
+  width: 250px;
+  height: 100%;
+  background: #042331;
+  transition: all .5s ease;
+}
+.sidebar:hover {
+  width: 270px;
+  overflow-y: scroll;
+}
+.sidebar header {
+  font-size: 22px;
+  color: white;
+  line-height: 70px;
+  text-align: center;
+  background: #063146;
+  user-select: none;
+}
+.sidebar ul a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 20px;
+  color: white;
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  border-top: 1px solid rgba(255,255,255,.1);
+  transition: .4s;
+}
+ul li:hover a {
+  padding-left: 50px;
+}
+.sidebar ul a i {
+  margin-right: 16px;
+}
+#check{
+  display: none;
+}
+label #btn,label #cancel{
+  position: absolute;
+  background: #042331;
+  border-radius: 3px;
+  cursor: pointer;
+}
+label #btn{
+  left: 250px;
+  top: 25px;
+  font-size: 35px;
+  color: white;
+  padding: 6px 12px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .5s;
+}
+label #cancel{
+  z-index: 1111;
+  left: 195px;
+  top: 17px;
+  font-size: 30px;
+  color: #0a5275;
+  padding: 4px 9px;
+  transition: all .5s ease;
+}
+#check:checked ~ .sidebar{
+  left: -250px;
+}
+#check:checked ~ label #btn{
+  left: 40px;
+  opacity: 1;
+  pointer-events: auto;
+}
+#check:checked ~ label #cancel{
+  left: -195px;
+}
+#check:checked ~ section{
+  margin-left: 0px;
+}
+
+/*section{
+  background: url(../img/guilty.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  transition: all .5s;
+  margin-left: -250px;
+}*/
+
+/* Navbar */
+
+/*.header {
+  height: 35px;
+  width: 1308px;
+  padding: 20px;
+  background-color: #3c8dbc;
+}
+
+.headerlogout {
+  height: 100%;
+  width: 108px;
+  margin-top: -10px;
+  margin-left: 1200px;
+  background-color: red;
+}*/
+.navbar {
+    height: 80px;
+    width: 1349px;
+  } 
+.navbar, .navbarul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #3c8dbc;
+}
+
+.navbarli {
+  float: right;
+}
+
+.navbarli, .navbara {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  transition: .5s;
+}
+
+.navbarali , .navbara:hover {
+  color: blue;
+  padding: none;
+}
+
+/* Halaman Admin */
+
+.admin {
+  border: 4px solid #333;
+  margin-left: 250px;
+  height: 600px;
+  width: 1050px;
+  padding: 20px;
+  background: #f1f1f1;
+}
+
+.judul {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.tambah {
+  background-color: #3c8dbc;
+  border: 4px solid #3c8dbc;
+  color: white;
+  padding: 3px;
+}
+
+table, tr, a {
+  color: black;
+}
+
+.ubahhapuswarna:hover {
+  color: #3c8dbc;
+}
+
+table, tr, th {
+  color: black;
+  line-height: 70px;
+  text-align: center;
+  background: white;
+  user-select: none;
+}
+
+
+/* ubah data Pengguna */
+
+.ubahcontainer {
+  border: 4px solid #333;
+  margin-left: 250px;
+  height: 800px;
+  width: 1050px;
+  padding: 20px;
+  background: #f1f1f1;
+}
+
+.judulubah {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+form ul li {
+  font-size: 14px;
+  font-family: 'Roboto';
+  font-weight: bold;
+  padding: 10px;
+  background: white;
+}
+
+form ul li input, select, button {
+  padding: 3px;
+  width: 1000px;
+  margin-top: 5px;
+}
+
+.ubatdatasubmit {
+  height: 30px;
+  width: 150px;
+  background-color: #3c8dbc;
+  color: white;
+}
+
+/*tambah data Pengguna*/
+
+.tambahdatacontainer {
+  border: 4px solid #333;
+  margin-left: 250px;
+  height: 800px;
+  width: 1050px;
+  padding: 20px;
+  background: #f1f1f1;
+}
+
+.tambahdatasubmit {
+  height: 30px;
+  width: 150px;
+  background-color: #3c8dbc;
+  color: white;
+}
+
+
+/* Halaman Administrasi Sekolah (Data Orangtua) */
+
+.administrasi_sekolah {
+  border: 4px solid #333;
+  margin-left: 250px;
+  height: 600px;
+  width: 1050px;
+  padding: 20px;
+  background: #f1f1f1;
+}
+
+/* Halaman Administrasi Sekolah (Siswa) */
+
+.siswa {
+  border: 4px solid #333;
+  margin-left: 250px;
+  height: 600px;
+  width: 1050px;
+  padding: 20px;
+  background: #f1f1f1;
+}
+
+/* Halaman Administrasi Sekolah (Penerima Bantuan) */
+
+.penerimabantuan {
+  border: 4px solid #333;
+  margin-left: 250px;
+  height: 600px;
+  width: 1050px;
+  padding: 20px;
+  background: #f1f1f1;
+}
+
+
+/* Halaman Guru */
+
+.guru {
+  border: 4px solid #333;
+  margin-left: 250px;
+  height: 600px;
+  width: 1050px;
+  padding: 20px;
+  background: #f1f1f1;
+}
+
+p {
+  margin-top: 100px;
+  margin-left: 100px;
+  display: center;
+}
+
+/*ukuran container full layar
+height: 626px;
+width: 1366px;*/
+
+.loader {
+      width: 100px;
+      margin-left: 350px;
+      position: absolute;
+      top: 150px;
+      left: 245px;
+      z-index: -1;
+      display: none;
+      background-color: red;
+    }
+
+
+
